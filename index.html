@@ -238,6 +238,9 @@
     white-space:pre-line;
     margin:0 0 18px;
   }
+  .modal-email-row{
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  }
   .modal-email{
     display:inline-flex;align-items:center;gap:8px;
     font-family:"DM Mono",monospace;font-size:13px;
@@ -246,6 +249,10 @@
     padding:10px 14px;
   }
   .modal-email svg{width:16px;height:16px;flex:0 0 auto;}
+  .modal-email-address{
+    font-family:"DM Mono",monospace;font-size:12.5px;
+    color:var(--ink-soft);
+  }
 </style>
 </head>
 <body>
@@ -338,10 +345,13 @@
         </button>
         <h2 id="schedule-modal-title">Request the Wagon</h2>
         <p class="modal-body" id="schedule-modal-text">Add the request details here.</p>
-        <a class="modal-email" id="schedule-modal-email" href="#">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
-          <span>Email us</span>
-        </a>
+        <div class="modal-email-row">
+          <a class="modal-email" id="schedule-modal-email" href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+            <span>Email us</span>
+          </a>
+          <span class="modal-email-address" id="schedule-modal-address"></span>
+        </div>
       </div>
     </div>
 
@@ -402,9 +412,11 @@
     const closeBtn = document.getElementById("schedule-modal-close");
     const textEl   = document.getElementById("schedule-modal-text");
     const emailEl  = document.getElementById("schedule-modal-email");
+    const addrEl   = document.getElementById("schedule-modal-address");
 
     textEl.textContent = SCHEDULE_MODAL.text;
     emailEl.href = "mailto:" + SCHEDULE_MODAL.email;
+    addrEl.textContent = SCHEDULE_MODAL.email;
 
     function openModal(e) {
       e.preventDefault();
