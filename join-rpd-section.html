@@ -1,0 +1,185 @@
+<!-- =========================================
+     JOIN RPD — Recruitment Tab Section
+     Drop this into the site's page structure.
+     Add a nav link: <a href="#join-rpd">Join RPD</a>
+     (or its own route/page, e.g. /join-rpd)
+     ========================================= -->
+
+<style>
+  :root{
+    --rpd-navy:#0b1f3a;
+    --rpd-navy-dark:#071527;
+    --rpd-gold:#c9a227;
+    --rpd-gold-light:#e8cf6f;
+    --rpd-text:#1a1a1a;
+    --rpd-bg-light:#f7f8fa;
+  }
+
+  .join-rpd-section{
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--rpd-text);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+
+  .join-rpd-hero{
+    background: linear-gradient(135deg, var(--rpd-navy), var(--rpd-navy-dark));
+    color: #fff;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 4px solid var(--rpd-gold);
+  }
+
+  .join-rpd-hero h1{
+    font-size: 2.2rem;
+    margin: 0 0 0.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .join-rpd-hero p{
+    color: var(--rpd-gold-light);
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .join-rpd-card{
+    background: var(--rpd-bg-light);
+    border-left: 4px solid var(--rpd-gold);
+    border-radius: 6px;
+    padding: 1.75rem 2rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .join-rpd-card h2{
+    color: var(--rpd-navy);
+    font-size: 1.35rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.4rem;
+  }
+
+  .join-rpd-card ul, .join-rpd-card ol{
+    margin: 0;
+    padding-left: 1.4rem;
+    line-height: 1.7;
+  }
+
+  .join-rpd-card li{
+    margin-bottom: 0.4rem;
+  }
+
+  .join-rpd-note{
+    font-style: italic;
+    color: #555;
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+  }
+
+  .join-rpd-cta{
+    text-align: center;
+    background: var(--rpd-navy);
+    border-radius: 8px;
+    padding: 2.25rem 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .join-rpd-cta h2{
+    color: #fff;
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+
+  .join-rpd-cta a.join-rpd-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--rpd-gold);
+    color: var(--rpd-navy-dark);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .join-rpd-cta a.join-rpd-btn:hover{
+    background: var(--rpd-gold-light);
+    transform: translateY(-2px);
+  }
+
+  .join-rpd-cta .join-rpd-subnote{
+    color: #cbd3e0;
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+  }
+
+  @media (max-width: 600px){
+    .join-rpd-hero h1{ font-size: 1.6rem; }
+    .join-rpd-card{ padding: 1.25rem 1.25rem; }
+  }
+</style>
+
+<section id="join-rpd" class="join-rpd-section">
+
+  <div class="join-rpd-hero">
+    <h1>Join the Revere Police Department</h1>
+    <p>Serving Revere with C.A.R.E. — and looking for people ready to serve alongside us.</p>
+  </div>
+
+  <div class="join-rpd-card">
+    <h2>Basic Requirements</h2>
+    <ul>
+      <li>U.S. citizen</li>
+      <li>Valid driver's license</li>
+      <li>High school diploma or GED, <strong>or</strong> 3+ years of active-duty military service with an honorable discharge</li>
+      <li>Must pass a background check, interview, medical exam, and Physical Ability Test (PAT)</li>
+      <li>Non-smoker at time of appointment and after</li>
+      <li>No disqualifying criminal history</li>
+    </ul>
+  </div>
+
+  <div class="join-rpd-card">
+    <h2>Age</h2>
+    <ul>
+      <li>Must be at least 19 years old to sit for the Civil Service exam</li>
+      <li>Must be 21 years old to be appointed as a police officer</li>
+      <li><strong>No upper age limit</strong> — Revere does not enforce the 32-year-old cap some Massachusetts cities use</li>
+    </ul>
+  </div>
+
+  <div class="join-rpd-card">
+    <h2>Residency</h2>
+    <ul>
+      <li>You do <strong>not</strong> need to live in Revere to apply or take the exam</li>
+      <li>Revere residents who've lived in the city for the full 12 months before the exam date receive <strong>hiring preference</strong> on the eligible list</li>
+    </ul>
+    <p class="join-rpd-note">Massachusetts law (M.G.L. c. 31, §58) prohibits requiring residency to apply — residency only affects your position on the hiring list.</p>
+  </div>
+
+  <div class="join-rpd-card">
+    <h2>How the Process Works</h2>
+    <ol>
+      <li>Take the Massachusetts Civil Service Police Officer exam</li>
+      <li>Your name is placed on the statewide "eligible list"</li>
+      <li>When Revere PD is hiring, they request names from that list</li>
+      <li>Background check → interview → conditional job offer</li>
+      <li>Medical exam + Physical Ability Test (PAT)</li>
+      <li>Municipal Police Academy training</li>
+    </ol>
+  </div>
+
+  <div class="join-rpd-cta">
+    <h2>Ready to Apply?</h2>
+    <p style="color:#e8ecf3;">Start with the official Massachusetts Civil Service exam application.</p>
+    <a class="join-rpd-btn" href="https://www.mass.gov/how-to-become-a-police-officer-in-massachusetts" target="_blank" rel="noopener noreferrer">
+      Go to MA Civil Service Exam Info →
+    </a>
+    <p class="join-rpd-subnote">Opens the official Mass.gov page in a new tab</p>
+  </div>
+
+</section>

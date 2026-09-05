@@ -336,7 +336,15 @@
         <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
       </a></li>
 
-      <li><a class="link reveal" id="lnk-rpd" href="#" style="animation-delay:.46s">
+      <li><a class="link reveal" id="lnk-joinrpd" href="#" style="animation-delay:.46s">
+        <span class="ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <span class="txt"><span class="label">Join RPD</span><span class="sub">Start a career with Revere Police</span></span>
+        <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
+      </a></li>
+
+      <li><a class="link reveal" id="lnk-rpd" href="#" style="animation-delay:.52s">
         <span class="ic" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 20 5v6c0 5-3.5 8.6-8 10-4.5-1.4-8-5-8-10V5l8-3Z"/></svg>
         </span>
@@ -395,7 +403,8 @@
     tiktok:    "#",                            // e.g. https://tiktok.com/@yourhandle
     facebook:  "#",                            // e.g. https://facebook.com/yourpage
     rpd:       "https://www.reverepolice.org", // official RPD site (verified)
-    revere:    "https://www.revere.org"        // official City of Revere site
+    revere:    "https://www.revere.org",        // official City of Revere site
+    joinrpd:   "join-rpd.html"                 // Join RPD recruitment page
   };
 
   /* "Request the Wagon" opens a popup instead of navigating.
@@ -406,7 +415,7 @@
   };
 
   (function () {
-    const map = { donate:"lnk-donate", find:"lnk-find", about:"lnk-about", instagram:"lnk-instagram", twitter:"lnk-twitter", tiktok:"lnk-tiktok", facebook:"lnk-facebook", rpd:"lnk-rpd", revere:"lnk-revere" };
+    const map = { donate:"lnk-donate", find:"lnk-find", about:"lnk-about", instagram:"lnk-instagram", twitter:"lnk-twitter", tiktok:"lnk-tiktok", facebook:"lnk-facebook", joinrpd:"lnk-joinrpd", rpd:"lnk-rpd", revere:"lnk-revere" };
     Object.entries(map).forEach(([key, id]) => {
       const el = document.getElementById(id);
       const url = LINKS[key];

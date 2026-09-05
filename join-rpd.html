@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Join RPD — Revere Police Department</title>
+<meta name="description" content="How to apply to become a police officer with the Revere Police Department through the Massachusetts Civil Service system." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy:#0A1B33;
+    --navy-2:#0F2647;
+    --blue:#1F4E96;
+    --gold:#D4A537;
+    --gold-soft:#E8C76A;
+    --cream:#F6F2E8;
+    --paper:#FFFFFF;
+    --ink:#161B24;
+    --ink-soft:#5A6473;
+    --line:#E7E0D0;
+    --shadow:0 1px 2px rgba(10,27,51,.06), 0 8px 24px rgba(10,27,51,.10);
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+
+  .wrap{
+    max-width:460px;
+    margin:0 auto;
+    padding:0 18px 44px;
+  }
+
+  /* ---------- Header (matches index.html) ---------- */
+  .top{
+    position:relative;
+    margin:0 -18px 0;
+    background:
+      radial-gradient(120% 80% at 50% -20%, var(--navy-2) 0%, var(--navy) 60%);
+    color:#fff;
+    padding:40px 26px 30px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .top::before{
+    content:"";
+    position:absolute; inset:14px 14px 22px;
+    border:1px solid rgba(212,165,55,.32);
+    border-radius:14px;
+    pointer-events:none;
+  }
+  .eyebrow{
+    font-family:"DM Mono",monospace;
+    font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--gold-soft);
+    margin:0 0 8px;
+  }
+  h1{
+    font-family:"Bricolage Grotesque",sans-serif;
+    font-weight:800;
+    font-size:clamp(28px,8.5vw,38px);
+    line-height:1.05;
+    letter-spacing:-.01em;
+    margin:0;
+  }
+  .slogan{
+    margin:10px 0 0;
+    font-size:14.5px;
+    color:rgba(255,255,255,.82);
+  }
+  .slogan b{color:var(--gold-soft);font-weight:600;}
+
+  .back-link{
+    display:inline-flex;align-items:center;gap:6px;
+    margin:18px 0 6px;
+    font-family:"DM Mono",monospace;
+    font-size:11.5px;letter-spacing:.04em;
+    color:var(--blue);
+  }
+
+  /* ---------- Content cards ---------- */
+  .card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-top:3px solid var(--gold);
+    border-radius:15px;
+    padding:20px 20px 18px;
+    box-shadow:var(--shadow);
+    margin-top:16px;
+  }
+  .card h2{
+    font-family:"Bricolage Grotesque",sans-serif;
+    font-weight:700;
+    font-size:17px;
+    color:var(--navy);
+    margin:0 0 10px;
+  }
+  .card ul, .card ol{
+    margin:0;
+    padding-left:1.2rem;
+    font-size:14px;
+    line-height:1.65;
+    color:var(--ink);
+  }
+  .card li{margin-bottom:6px;}
+  .card li:last-child{margin-bottom:0;}
+  .card .note{
+    margin:10px 0 0;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    font-style:italic;
+    line-height:1.5;
+  }
+
+  /* ---------- CTA button (matches link-card treatment) ---------- */
+  .cta{
+    margin-top:20px;
+    background:var(--navy);
+    border-radius:15px;
+    padding:22px 20px;
+    text-align:center;
+  }
+  .cta h2{
+    font-family:"Bricolage Grotesque",sans-serif;
+    color:#fff;
+    font-size:17px;
+    margin:0 0 6px;
+  }
+  .cta p{
+    color:rgba(255,255,255,.75);
+    font-size:13px;
+    margin:0 0 16px;
+  }
+  .cta a.btn{
+    display:inline-block;
+    background:var(--gold);
+    color:var(--navy);
+    font-family:"Bricolage Grotesque",sans-serif;
+    font-weight:700;
+    font-size:14px;
+    text-decoration:none;
+    padding:13px 26px;
+    border-radius:50px;
+    transition:background .15s ease, transform .15s ease;
+  }
+  .cta a.btn:hover{background:var(--gold-soft);transform:translateY(-2px);}
+  .cta .subnote{
+    margin-top:10px;
+    font-size:11px;
+    color:rgba(255,255,255,.55);
+  }
+
+  .lateral{
+    margin-top:16px;
+    background:var(--navy);
+    border-radius:15px;
+    padding:22px 20px;
+    text-align:center;
+  }
+  .lateral h2{
+    font-family:"Bricolage Grotesque",sans-serif;
+    font-weight:700;font-size:17px;color:#fff;
+    margin:0 0 6px;
+  }
+  .lateral p{
+    font-size:13px;color:rgba(255,255,255,.75);margin:0 0 16px;
+  }
+  .lateral-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--gold);color:var(--navy);
+    font-family:"Bricolage Grotesque",sans-serif;
+    font-weight:700;font-size:14px;
+    padding:13px 26px;border-radius:50px;
+    transition:background .15s ease, transform .15s ease;
+  }
+  .lateral-btn:hover{background:var(--gold-soft);transform:translateY(-2px);}
+  .lateral-btn svg{width:15px;height:15px;flex:0 0 auto;}
+  .lateral-email{
+    display:block;margin-top:10px;
+    font-family:"DM Mono",monospace;font-size:11px;color:rgba(255,255,255,.55);
+  }
+
+  footer{
+    margin-top:30px;text-align:center;
+    color:var(--ink-soft);font-size:12px;line-height:1.6;
+  }
+  footer .div{
+    width:46px;height:3px;border-radius:2px;background:var(--gold);
+    margin:0 auto 16px;
+  }
+  footer .unit{color:var(--ink);font-weight:600;}
+  footer a{color:var(--blue);}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="top">
+    <p class="eyebrow">Revere Police Department</p>
+    <h1>Join RPD</h1>
+    <p class="slogan">Serve the city — <b>build a career with RPD</b></p>
+  </header>
+
+  <a class="back-link" href="index.html">&larr; Back to C.A.R.E. Wagon</a>
+
+  <div class="card">
+    <h2>Basic Requirements</h2>
+    <ul>
+      <li>U.S. citizen</li>
+      <li>Valid driver's license</li>
+      <li>High school diploma or GED, <strong>or</strong> 3+ years of active-duty military service with an honorable discharge</li>
+      <li>Must pass a background check, interview, medical exam, and Physical Ability Test (PAT)</li>
+      <li>Non-smoker at time of appointment and after</li>
+      <li>No disqualifying criminal history</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Age</h2>
+    <ul>
+      <li>Must be at least 19 years old to sit for the Civil Service exam</li>
+      <li>Must be 21 years old to be appointed as a police officer</li>
+      <li><strong>No upper age limit</strong> — Revere does not enforce the 32-year-old cap some Massachusetts cities use</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Residency</h2>
+    <ul>
+      <li>You do <strong>not</strong> need to live in Revere to apply or take the exam</li>
+      <li>Revere residents who've lived in the city for the full 12 months before the exam date receive <strong>hiring preference</strong> on the eligible list</li>
+    </ul>
+    <p class="note">Massachusetts law (M.G.L. c. 31, §58) prohibits requiring residency to apply — residency only affects your position on the hiring list.</p>
+  </div>
+
+  <div class="card">
+    <h2>How the Process Works</h2>
+    <ol>
+      <li>Take the Massachusetts Civil Service Police Officer exam</li>
+      <li>Your name is placed on the statewide "eligible list"</li>
+      <li>When Revere PD is hiring, they request names from that list</li>
+      <li>Background check → interview → conditional job offer</li>
+      <li>Medical exam + Physical Ability Test (PAT)</li>
+      <li>Municipal Police Academy training</li>
+    </ol>
+  </div>
+
+  <div class="cta">
+    <h2>Ready to Apply?</h2>
+    <p>Start with the official Massachusetts Civil Service exam application.</p>
+    <a class="btn" href="https://www.mass.gov/how-to-become-a-police-officer-in-massachusetts" target="_blank" rel="noopener noreferrer">
+      MA Civil Service Exam Info →
+    </a>
+    <p class="subnote">Opens the official Mass.gov page in a new tab</p>
+  </div>
+
+  <div class="lateral">
+    <h2>Lateral Transfer</h2>
+    <p>Sworn police officers interested in joining the Revere Police Department through a lateral transfer are encouraged to reach out directly.</p>
+    <a class="lateral-btn" href="mailto:Recruitment@reverepolice.org">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+      Email Recruitment
+    </a>
+    <span class="lateral-email">Recruitment@reverepolice.org</span>
+  </div>
+
+  <footer>
+    <div class="div"></div>
+    <span class="unit">Revere Police Department</span><br>
+    400 Revere Beach Parkway, Revere, MA 02151<br>
+    <a href="tel:781-284-1212">781-284-1212</a>
+  </footer>
+
+</div>
+</body>
+</html>
